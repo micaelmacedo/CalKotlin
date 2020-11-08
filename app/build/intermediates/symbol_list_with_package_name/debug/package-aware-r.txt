@@ -1705,6 +1705,7 @@ id tvSubtr
 id tvSum
 id tvTenPwr
 id tvThree
+id tvTitle
 id tvTwo
 id tvZero
 id unchecked

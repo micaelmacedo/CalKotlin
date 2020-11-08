@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",

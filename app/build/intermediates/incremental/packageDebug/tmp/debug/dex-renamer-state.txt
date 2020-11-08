@@ -1,4 +1,4 @@
-#Sun Nov 08 14:10:31 BRT 2020
+#Sun Nov 08 18:20:27 BRT 2020
 base.0=C\:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

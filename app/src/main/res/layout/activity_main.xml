@@ -372,7 +372,6 @@
         android:maxEms="20"
         android:maxLines="1"
         android:singleLine="false"
-        android:text="TEXT"
         android:textAlignment="textStart"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -383,21 +382,37 @@
         app:layout_constraintVertical_bias="0.405" />
 
     <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="319dp"
+        android:layout_height="33dp"
+        android:gravity="center"
+        android:maxEms="20"
+        android:maxLines="1"
+        android:singleLine="false"
+        android:text="Histórico:"
+        android:textAlignment="textStart"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCalcHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
         android:id="@+id/tvCalcHistory"
-        android:layout_width="321dp"
-        android:layout_height="242dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="319dp"
+        android:layout_height="162dp"
         android:gravity="bottom"
         android:maxEms="20"
         android:maxLines="10"
         android:singleLine="false"
-        android:text="Histórico:\n"
         android:textAlignment="textStart"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="96dp" />
 
     <TextView
         android:id="@+id/tvDenominator"
