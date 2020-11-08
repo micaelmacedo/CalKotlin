@@ -1517,6 +1517,8 @@ id ghost_view_holder
 id gone
 id group_divider
 id groups
+id guideline
+id guideline2
 id hideable
 id home
 id homeAsUp
@@ -1672,6 +1674,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id tvBackspace
+id tvCalcHistory
 id tvCalcScreen
 id tvClean
 id tvComma
