@@ -1,0 +1,2 @@
+br/com/micaelmacedo/basicconstraintlayout/BuildConfig.java
+ br.com.micaelmacedo.basicconstraintlayout.BuildConfig

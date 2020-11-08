@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+
+        android:id="@+id/tvSum"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/tvResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvThree" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/teal_900"
+        android:gravity="center"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvComma" />
+
+    <TextView
+        android:id="@+id/tvSubtr"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/tvSum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvSix" />
+
+    <TextView
+        android:id="@+id/tvSqrRoot"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="√x"
+        app:layout_constraintBottom_toTopOf="@+id/tvPower"
+        app:layout_constraintEnd_toStartOf="@+id/tvInitialParent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFactorial"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="n!"
+        app:layout_constraintBottom_toTopOf="@+id/tvNine"
+        app:layout_constraintEnd_toStartOf="@+id/tvDivision"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvEndParenthesis" />
+
+    <TextView
+        android:id="@+id/tvPower"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="x^y"
+        app:layout_constraintBottom_toTopOf="@+id/tvTenPwr"
+        app:layout_constraintEnd_toStartOf="@+id/tvSeven"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLog"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="log"
+        app:layout_constraintBottom_toTopOf="@+id/tvLn"
+        app:layout_constraintEnd_toStartOf="@+id/tvOne"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvOne"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/tvMinusPlus"
+        app:layout_constraintEnd_toStartOf="@+id/tvTwo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLog" />
+
+    <TextView
+        android:id="@+id/tvTwo"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/tvZero"
+        app:layout_constraintEnd_toStartOf="@+id/tvThree"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvOne" />
+
+    <TextView
+        android:id="@+id/tvThree"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/tvComma"
+        app:layout_constraintEnd_toStartOf="@+id/tvSum"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTwo" />
+
+    <TextView
+        android:id="@+id/tvLn"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="ln"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvMinusPlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMinusPlus"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="+/-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvZero"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLn" />
+
+    <TextView
+        android:id="@+id/tvZero"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvComma"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvMinusPlus" />
+
+    <TextView
+        android:id="@+id/tvTenPwr"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="10^x"
+        app:layout_constraintBottom_toTopOf="@+id/tvLog"
+        app:layout_constraintEnd_toStartOf="@+id/tvFour"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSix"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/tvThree"
+        app:layout_constraintEnd_toStartOf="@+id/tvSubtr"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvFive" />
+
+    <TextView
+        android:id="@+id/tvNine"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/tvSix"
+        app:layout_constraintEnd_toStartOf="@+id/tvMultiplication"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvEight" />
+
+    <TextView
+        android:id="@+id/tvPwrTwo"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="x^2"
+        app:layout_constraintBottom_toTopOf="@+id/tvSqrRoot"
+        app:layout_constraintEnd_toStartOf="@+id/tvDenominator"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/button15"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/tvFactorial"
+        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvModule" />
+
+    <TextView
+        android:id="@+id/button8"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="116dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/tvPwrTwo"
+        app:layout_constraintEnd_toStartOf="@+id/tvPi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBackspace"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="⌫"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvClean" />
+
+    <TextView
+        android:id="@+id/button7"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/tvDivision"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button15" />
+
+    <TextView
+        android:id="@+id/tvDivision"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="÷"
+        app:layout_constraintBottom_toTopOf="@+id/tvMultiplication"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvFactorial" />
+
+    <TextView
+        android:id="@+id/tvMultiplication"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="x"
+        app:layout_constraintBottom_toTopOf="@+id/tvSubtr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvNine" />
+
+    <TextView
+        android:id="@+id/tvClean"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/button15"
+        app:layout_constraintEnd_toStartOf="@+id/tvBackspace"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvEuler" />
+
+    <TextView
+        android:id="@+id/tvModule"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="|x|"
+        app:layout_constraintBottom_toTopOf="@+id/tvEndParenthesis"
+        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDenominator" />
+
+    <TextView
+        android:id="@+id/tvEndParenthesis"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text=")"
+        app:layout_constraintBottom_toTopOf="@+id/tvEight"
+        app:layout_constraintEnd_toStartOf="@+id/tvFactorial"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvInitialParent" />
+
+    <TextView
+        android:id="@+id/tvEight"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/tvFive"
+        app:layout_constraintEnd_toStartOf="@+id/tvNine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvSeven" />
+
+    <TextView
+        android:id="@+id/tvFive"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/tvTwo"
+        app:layout_constraintEnd_toStartOf="@+id/tvSix"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvFour" />
+
+    <TextView
+        android:id="@+id/tvEuler"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="e"
+        app:layout_constraintBottom_toTopOf="@+id/tvModule"
+        app:layout_constraintEnd_toStartOf="@+id/tvClean"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvPi" />
+
+    <TextView
+        android:id="@+id/tvCalcScreen"
+        android:layout_width="356dp"
+        android:layout_height="381dp"
+        android:layout_marginTop="36dp"
+        android:text=" "
+        android:textSize="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEuler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDenominator"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="1/x"
+        app:layout_constraintBottom_toTopOf="@+id/tvInitialParent"
+        app:layout_constraintEnd_toStartOf="@+id/tvModule"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvPwrTwo" />
+
+    <TextView
+        android:id="@+id/tvSeven"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/tvFour"
+        app:layout_constraintEnd_toStartOf="@+id/tvEight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvPower" />
+
+    <TextView
+        android:id="@+id/tvFour"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/tvOne"
+        app:layout_constraintEnd_toStartOf="@+id/tvFive"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTenPwr" />
+
+    <TextView
+        android:id="@+id/tvInitialParent"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="("
+        app:layout_constraintBottom_toTopOf="@+id/tvSeven"
+        app:layout_constraintEnd_toStartOf="@+id/tvEndParenthesis"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvSqrRoot" />
+
+    <TextView
+        android:id="@+id/tvPi"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text="π"
+        app:layout_constraintBottom_toTopOf="@+id/tvDenominator"
+        app:layout_constraintEnd_toStartOf="@+id/tvEuler"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button8" />
+
+    <TextView
+        android:id="@+id/tvComma"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/gray"
+        android:gravity="center"
+        android:text=","
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvZero" />
+</androidx.constraintlayout.widget.ConstraintLayout>
