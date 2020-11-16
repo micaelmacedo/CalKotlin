@@ -397,7 +397,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun validateNumber(screenText:List<String>):Boolean{
-        return (screenText.isNotEmpty() && (screenText.last().matches("-?[\\d]*\\.{0,1}[\\d]*(?:E-?\\d+)?".toRegex())
+        return (!screenText.isEmpty() && (screenText.last().matches("-?[\\d]*\\.{0,1}[\\d]*(?:E-?\\d+)?".toRegex())
                 ||
                 screenText.last().matches("-?[\\d]*\\.{0,1}[\\d]*(?:E-?\\d+)?".toRegex())))
     }
