@@ -73,7 +73,7 @@
         android:layout_height="51dp"
         android:backgroundTint="@color/gray"
         android:gravity="center"
-        android:text="x^y"
+        android:text="^"
         app:layout_constraintBottom_toTopOf="@+id/tvTenPwr"
         app:layout_constraintEnd_toStartOf="@+id/tvSeven"
         app:layout_constraintHorizontal_bias="0.5"

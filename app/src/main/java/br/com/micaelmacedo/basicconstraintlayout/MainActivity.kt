@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import net.objecthunter.exp4j.Expression
-import net.objecthunter.exp4j.ExpressionBuilder
-import java.lang.Double.parseDouble
+import kotlin.math.absoluteValue
+import kotlin.math.ln
+import kotlin.math.log
+import kotlin.math.pow
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,12 @@ class MainActivity : AppCompatActivity() {
         tvEight.setOnClickListener { tv -> showChar(tv as TextView) }
         tvNine.setOnClickListener { tv -> showChar(tv as TextView) }
         tvZero.setOnClickListener { tv -> showChar(tv as TextView) }
+
+        tvComma.setOnClickListener{ tv -> showChar(tv as TextView) }
+
+        tvMinusPlus.setOnClickListener{
+            minusPlus()
+        }
 
         //Funções com dois componentes
         tvSum.setOnClickListener {
@@ -82,19 +89,202 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        tvLog.setOnClickListener{
+            var tv = it as TextView;
+            var result = validateExpression(tvCalcScreen.text.split(" "))
+            if (result.toString() != "null") {
+                appendHistory(result)
+                showResult(result.toString() + " log ")
+            } else {
+                putSpace(tv)
+                showChar(tv)
+                putSpace(tv)
+            }
+        }
+
+        tvPower.setOnClickListener{
+            var tv = it as TextView;
+            var result = validateExpression(tvCalcScreen.text.split(" "))
+            if (result.toString() != "null") {
+                appendHistory(result)
+                showResult(result.toString() + " x ")
+            } else {
+                putSpace(tv)
+                showChar(tv)
+                putSpace(tv)
+            }
+        }
+
         //Operação da calculadora
         tvClean.setOnClickListener { tv -> cleanScreen(tv as TextView) }
 
         tvResult.setOnClickListener {
             var result = validateExpression(tvCalcScreen.text.split(" "))
             if (result.toString() != "null") {
-                showResult(result.toString())
                 appendHistory(result)
+                showResult(result.toString())
             } else { showResult("Erro")}
 
         }
 
         //Funções com um componente
+        tvPwrTwo.setOnClickListener{
+            var tv = it as TextView
+            var result = pwrTwo()
+        }
+
+        tvSqrRoot.setOnClickListener{
+            var tv = it as TextView
+            var result = sqrRoot()
+        }
+
+        tvTenPwr.setOnClickListener{
+            var tv = it as TextView
+            var result = tenPwr()
+        }
+
+        tvLn.setOnClickListener{
+            var tv = it as TextView
+            var result = lnFun()
+        }
+
+        tvDenominator.setOnClickListener{
+            var tv = it as TextView
+            var result = denominator()
+        }
+        tvModule.setOnClickListener{
+            var tv = it as TextView
+            var result = module()
+        }
+        tvFactorial.setOnClickListener{
+            var tv = it as TextView
+            var result = factorial()
+        }
+
+    }
+
+    private fun logFun(split: List<String>): Float? {
+        if (split.size < 3) {
+            return null;
+        } else {
+            return log(split[0].toDouble() , split[2].toDouble()).toFloat()
+
+        }
+    }
+    private fun pwrTwo(){
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = target.toFloat().pow(2).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun tenPwr(){
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = 10.toFloat().pow(target.toFloat()).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+    private fun lnFun(){
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = ln(target.toFloat()).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun sqrRoot(){
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = kotlin.math.sqrt(target.toFloat()).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun denominator(){
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = (1/(target.toFloat())).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun module(){
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = (target.toFloat().absoluteValue).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun factorial(){
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            var i = target.toIntOrNull()
+            var result = target
+            var resultInt = result.toInt()
+            if (i == null){
+                result = "Erro"
+            } else {
+                while (i > 1) {
+                    resultInt = resultInt * (i - 1)
+                    i--
+                }
+                result = resultInt.toString()
+
+            }
+            screenText.set(lastIndex - 1, result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun minusPlus(){
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val minus = "-"
+            var resultMinusPlus = ""
+            if (target.contains("-")) {
+                resultMinusPlus = target.replace("-", "")
+            }
+            else resultMinusPlus = "$minus$target"
+            screenText.set(lastIndex-1, resultMinusPlus)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun validateNumber(screenText:List<String>):Boolean{
+        return (screenText.size > 0 && screenText.last().matches("-?\\d+(\\.\\d+)?".toRegex()))
     }
 
     private fun showChar(v: TextView) {
@@ -118,19 +308,6 @@ class MainActivity : AppCompatActivity() {
             var operation = tvCalcScreen.text
             operation = "$operation\n"
             tvCalcHistory.append(operation)
-        }
-    }
-
-    private fun calculate(v: TextView) {
-        var operation = replaceOperation(tvCalcScreen.text.toString());
-        val operationBuild = ExpressionBuilder(operation).build()
-        try {
-
-            val result = operationBuild.evaluate()
-            showResult(result.toString())
-        } catch (ex: ArithmeticException) {
-
-            showResult("Error")
         }
     }
 
@@ -182,6 +359,14 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+    private fun power(split: List<String>): Float? {
+        if (split.size < 3) {
+            return null;
+        } else {
+            return split[0].toFloat().pow(split[2].toFloat())
+
+        }
+    }
 
     private fun validateExpression(expression: List<String>): Float? {
         var result: Float? = null
@@ -195,6 +380,8 @@ class MainActivity : AppCompatActivity() {
             if (expression[1] == "-") result = subtr(expression)
             if (expression[1] == "x") result = multi(expression)
             if (expression[1] == "÷") result = division(expression)
+            if (expression[1] == "^") result = power(expression)
+            if (expression[1] == "log") result = logFun(expression)
             return result
         } else {
             return result
