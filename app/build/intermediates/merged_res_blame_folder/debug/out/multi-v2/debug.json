@@ -48,21 +48,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\values-small-v4_values-small-v4.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\micae\\.gradle\\caches\\transforms-2\\files-2.1\\e384bf6580860a38b194ae77aa3fbfd7\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,128,198,270",
-                        "endColumns": "72,69,71,69",
-                        "endOffsets": "123,193,265,335"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\values-ca_values-ca.arsc.flat",
             "map": [
                 {
@@ -90,6 +75,21 @@
                         "startOffsets": "2906",
                         "endColumns": "100",
                         "endOffsets": "3002"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\values-small-v4_values-small-v4.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\micae\\.gradle\\caches\\transforms-2\\files-2.1\\e384bf6580860a38b194ae77aa3fbfd7\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,128,198,270",
+                        "endColumns": "72,69,71,69",
+                        "endOffsets": "123,193,265,335"
                     }
                 }
             ]
@@ -225,6 +225,22 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\values-v22_values-v22.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\micae\\.gradle\\caches\\transforms-2\\files-2.1\\d56b547ba0a39ec124154c760efe7d34\\appcompat-1.1.0\\res\\values-v22\\values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\values-pt-rPT_values-pt-rPT.arsc.flat",
             "map": [
                 {
@@ -252,22 +268,6 @@
                         "startOffsets": "105,213,319,426,515,616,740,825,906,998,1091,1188,1282,1382,1476,1572,1667,1759,1851,1935,2042,2153,2255,2363,2471,2578,2749,2848",
                         "endColumns": "107,105,106,88,100,123,84,80,91,92,96,93,99,93,95,94,91,91,83,106,110,101,107,107,106,170,98,84",
                         "endOffsets": "208,314,421,510,611,735,820,901,993,1086,1183,1277,1377,1471,1567,1662,1754,1846,1930,2037,2148,2250,2358,2466,2573,2744,2843,2928"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\values-v22_values-v22.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\micae\\.gradle\\caches\\transforms-2\\files-2.1\\d56b547ba0a39ec124154c760efe7d34\\appcompat-1.1.0\\res\\values-v22\\values-v22.xml",
-                    "from": {
-                        "startLines": "2,3,4,9",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,553",
-                        "endLines": "2,3,8,13",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,548,896"
                     }
                 }
             ]
@@ -547,6 +547,22 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\values-v25_values-v25.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\micae\\.gradle\\caches\\transforms-2\\files-2.1\\d56b547ba0a39ec124154c760efe7d34\\appcompat-1.1.0\\res\\values-v25\\values-v25.xml",
+                    "from": {
+                        "startLines": "2,3,4,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,126,209,308",
+                        "endLines": "2,3,5,7",
+                        "endColumns": "70,82,12,12",
+                        "endOffsets": "121,204,303,414"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\values-be_values-be.arsc.flat",
             "map": [
                 {
@@ -574,22 +590,6 @@
                         "startOffsets": "2916",
                         "endColumns": "100",
                         "endOffsets": "3012"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\micae\\AndroidStudioProjects\\BasicConstraintLayout\\app\\build\\intermediates\\res\\merged\\debug\\values-v25_values-v25.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\micae\\.gradle\\caches\\transforms-2\\files-2.1\\d56b547ba0a39ec124154c760efe7d34\\appcompat-1.1.0\\res\\values-v25\\values-v25.xml",
-                    "from": {
-                        "startLines": "2,3,4,6",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,126,209,308",
-                        "endLines": "2,3,5,7",
-                        "endColumns": "70,82,12,12",
-                        "endOffsets": "121,204,303,414"
                     }
                 }
             ]

@@ -124,6 +124,9 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        tvBackspace.setOnClickListener{ backspace()
+        }
+
         //Funções com um componente
         tvPwrTwo.setOnClickListener{
             var tv = it as TextView
@@ -187,6 +190,10 @@ class MainActivity : AppCompatActivity() {
             var tv = it as TextView
             var result = revTan()
         }
+    }
+
+    private fun backspace(){
+        if(tvCalcScreen.text.length>0) tvCalcScreen.text  = tvCalcScreen.text.substring(0,tvCalcScreen.text.length-1)
     }
 
     private fun logFun(split: List<String>): Float? {

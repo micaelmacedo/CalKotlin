@@ -57,6 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
@@ -201,10 +202,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="614" y="198" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1604537827055" />
-    <state x="565" y="158" key="AndroidProcessChooserDialog" timestamp="1604855362089">
+    <state x="565" y="158" key="AndroidProcessChooserDialog" timestamp="1605487568707">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="565" y="158" key="AndroidProcessChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1604855362089" />
+    <state x="565" y="158" key="AndroidProcessChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1605487568707" />
     <state width="464" height="465" key="DebuggerActiveHint" timestamp="1605477750845">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -225,42 +226,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="441" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604455315962" />
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1605486416040">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1605488257726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605486416040" />
-    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1605486416040">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605488257726" />
+    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1605488257725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605486416040" />
-    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1605486416040">
+    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605488257725" />
+    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1605488257725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605486416040" />
-    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1605486416040">
+    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605488257725" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1605488257726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605486416040" />
-    <state width="1491" height="210" key="GridCell.Tab.1.bottom" timestamp="1605486414334">
+    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605488257726" />
+    <state width="1491" height="210" key="GridCell.Tab.1.bottom" timestamp="1605488256094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605486414334" />
-    <state width="1491" height="210" key="GridCell.Tab.1.center" timestamp="1605486414334">
+    <state width="1491" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605488256094" />
+    <state width="1491" height="210" key="GridCell.Tab.1.center" timestamp="1605488256094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605486414334" />
-    <state width="1491" height="210" key="GridCell.Tab.1.left" timestamp="1605486414333">
+    <state width="1491" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605488256094" />
+    <state width="1491" height="210" key="GridCell.Tab.1.left" timestamp="1605488256094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605486414333" />
-    <state width="1491" height="210" key="GridCell.Tab.1.right" timestamp="1605486414334">
+    <state width="1491" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605488256094" />
+    <state width="1491" height="210" key="GridCell.Tab.1.right" timestamp="1605488256094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605486414334" />
+    <state width="1491" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605488256094" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1604844886567">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604844886567" />
+    <state x="584" y="190" key="chooseDestDirectoryDialog" timestamp="1605487080020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="584" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1605487080020" />
     <state x="579" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604534416395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
