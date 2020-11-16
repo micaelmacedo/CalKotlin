@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.math.absoluteValue
-import kotlin.math.ln
-import kotlin.math.log
-import kotlin.math.pow
+import kotlin.math.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -161,6 +158,35 @@ class MainActivity : AppCompatActivity() {
             var result = factorial()
         }
 
+        tvTan.setOnClickListener{
+            var tv = it as TextView
+            var result = tanFun()
+        }
+
+        tvSin.setOnClickListener{
+            var tv = it as TextView
+            var result = sinFun()
+        }
+
+        tvCos.setOnClickListener{
+            var tv = it as TextView
+            var result = cosFun()
+        }
+
+        tvRevCos.setOnClickListener{
+            var tv = it as TextView
+            var result = revCos()
+        }
+
+        tvRevSin.setOnClickListener{
+            var tv = it as TextView
+            var result = revSin()
+        }
+
+        tvInvTan.setOnClickListener{
+            var tv = it as TextView
+            var result = revTan()
+        }
     }
 
     private fun logFun(split: List<String>): Float? {
@@ -171,6 +197,79 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+    private fun revCos() {
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = (1/cos(target.toFloat())).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun revSin() {
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = (1/sin(target.toFloat())).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun revTan() {
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = (1/tan(target.toFloat())).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun tanFun() {
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = (tan(target.toFloat())).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun cosFun() {
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = (cos(target.toFloat())).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
+    private fun sinFun() {
+        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
+        else {
+            var target = screenText.last()
+            val lastIndex = screenText.size
+            val result = (sin(target.toFloat())).toString()
+            screenText.set(lastIndex-1,result)
+            tvCalcScreen.text = screenText.joinToString( separator = " ")
+        }
+    }
+
     private fun pwrTwo(){
         var screenText = tvCalcScreen.text.split(" ").toMutableList()
         if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
