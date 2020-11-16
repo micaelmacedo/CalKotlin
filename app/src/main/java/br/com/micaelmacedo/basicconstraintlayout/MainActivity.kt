@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
 
         //Funções com dois componentes
         tvSum.setOnClickListener {
-            var tv = it as TextView;
-            var result = validateExpression(tvCalcScreen.text.split(" "))
+            val tv = it as TextView
+            val result = validateExpression(tvCalcScreen.text.split(" "))
             if (result.toString() != "null") {
                 appendHistory(result)
                 showResult(result.toString() + " + ")
@@ -46,8 +46,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         tvSubtr.setOnClickListener {
-            var tv = it as TextView;
-            var result = validateExpression(tvCalcScreen.text.split(" "))
+            val tv = it as TextView
+            val result = validateExpression(tvCalcScreen.text.split(" "))
             if (result.toString() != "null") {
                 appendHistory(result)
                 showResult(result.toString() + " - ")
@@ -60,8 +60,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         tvDivision.setOnClickListener {
-            var tv = it as TextView;
-            var result = validateExpression(tvCalcScreen.text.split(" "))
+            val tv = it as TextView
+            val result = validateExpression(tvCalcScreen.text.split(" "))
             if (result.toString() != "null") {
                 appendHistory(result)
                 showResult(result.toString() + " ÷ ")
@@ -74,8 +74,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         tvMultiplication.setOnClickListener {
-            var tv = it as TextView;
-            var result = validateExpression(tvCalcScreen.text.split(" "))
+            val tv = it as TextView
+            val result = validateExpression(tvCalcScreen.text.split(" "))
             if (result.toString() != "null") {
                 appendHistory(result)
                 showResult(result.toString() + " x ")
@@ -87,8 +87,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         tvLog.setOnClickListener{
-            var tv = it as TextView;
-            var result = validateExpression(tvCalcScreen.text.split(" "))
+            val tv = it as TextView
+            val result = validateExpression(tvCalcScreen.text.split(" "))
             if (result.toString() != "null") {
                 appendHistory(result)
                 showResult(result.toString() + " log ")
@@ -100,8 +100,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         tvPower.setOnClickListener{
-            var tv = it as TextView;
-            var result = validateExpression(tvCalcScreen.text.split(" "))
+            val tv = it as TextView
+            val result = validateExpression(tvCalcScreen.text.split(" "))
             if (result.toString() != "null") {
                 appendHistory(result)
                 showResult(result.toString() + " x ")
@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
         tvClean.setOnClickListener { tv -> cleanScreen(tv as TextView) }
 
         tvResult.setOnClickListener {
-            var result = validateExpression(tvCalcScreen.text.split(" "))
+            val result = validateExpression(tvCalcScreen.text.split(" "))
             if (result.toString() != "null") {
                 appendHistory(result)
                 showResult(result.toString())
@@ -190,10 +190,17 @@ class MainActivity : AppCompatActivity() {
             var tv = it as TextView
             var result = revTan()
         }
+
+        TvPi.setOnClickListener{
+            var tv = it as TextView
+            tv.text = "3.14159"
+            showChar(tv)
+        }
     }
 
+
     private fun backspace(){
-        if(tvCalcScreen.text.length>0) tvCalcScreen.text  = tvCalcScreen.text.substring(0,tvCalcScreen.text.length-1)
+        if(tvCalcScreen.text.isNotEmpty()) tvCalcScreen.text  = tvCalcScreen.text.substring(0,tvCalcScreen.text.length-1)
     }
 
     private fun logFun(split: List<String>): Float? {
@@ -206,10 +213,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun revCos() {
-        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        val screenText = tvCalcScreen.text.split(" ").toMutableList()
         if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
         else {
-            var target = screenText.last()
+            val target = screenText.last()
             val lastIndex = screenText.size
             val result = (1/cos(target.toFloat())).toString()
             screenText.set(lastIndex-1,result)
@@ -218,10 +225,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun revSin() {
-        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        val screenText = tvCalcScreen.text.split(" ").toMutableList()
         if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
         else {
-            var target = screenText.last()
+            val target = screenText.last()
             val lastIndex = screenText.size
             val result = (1/sin(target.toFloat())).toString()
             screenText.set(lastIndex-1,result)
@@ -230,7 +237,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun revTan() {
-        var screenText = tvCalcScreen.text.split(" ").toMutableList()
+        val screenText = tvCalcScreen.text.split(" ").toMutableList()
         if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
         else {
             var target = screenText.last()
@@ -352,19 +359,19 @@ class MainActivity : AppCompatActivity() {
         var screenText = tvCalcScreen.text.split(" ").toMutableList()
         if (!validateNumber(screenText)) tvCalcScreen.text = "Erro"
         else {
-            var target = screenText.last()
+            val target = screenText.last()
             val lastIndex = screenText.size
             var i = target.toIntOrNull()
             var result = target
-            var resultInt = result.toInt()
+            var resultDoub = result.toDouble()
             if (i == null){
                 result = "Erro"
             } else {
                 while (i > 1) {
-                    resultInt = resultInt * (i - 1)
+                    resultDoub = resultDoub * (i - 1)
                     i--
                 }
-                result = resultInt.toString()
+                result = resultDoub.toString()
 
             }
             screenText.set(lastIndex - 1, result)
@@ -390,7 +397,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun validateNumber(screenText:List<String>):Boolean{
-        return (screenText.size > 0 && screenText.last().matches("-?\\d+(\\.\\d+)?".toRegex()))
+        return (screenText.isNotEmpty() && (screenText.last().matches("-?[\\d.]+(?:E-?\\d+)?".toRegex())
+                ||
+                screenText.last().matches("-?[\\d.]+(?:E-?\\d+)?".toRegex())))
     }
 
     private fun showChar(v: TextView) {
@@ -476,11 +485,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun validateExpression(expression: List<String>): Float? {
         var result: Float? = null
-        if ((!expression.last().matches("-?\\d+(\\.\\d+)?".toRegex()) || !expression.first()
-                .matches("-?\\d+(\\.\\d+)?".toRegex()))
+        if ((!expression.last().matches("-?[\\d.]+(?:E-?\\d+)?".toRegex()) || !expression.first()
+                .matches("-?[\\d.]+(?:E-?\\d+)?".toRegex()))
         ) {
             return result
         }
+        if (expression.size == 1){result = expression.first().toFloat()}
         if (expression.size == 3) {
             if (expression[1] == "+") result = sum(expression)
             if (expression[1] == "-") result = subtr(expression)
