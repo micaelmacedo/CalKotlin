@@ -417,7 +417,7 @@
 
     <TextView
         android:id="@+id/tvCalcScreen"
-        android:layout_width="322dp"
+        android:layout_width="328dp"
         android:layout_height="56dp"
         android:layout_marginBottom="28dp"
         android:gravity="center"
@@ -435,7 +435,7 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="331dp"
+        android:layout_width="328dp"
         android:layout_height="22dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"

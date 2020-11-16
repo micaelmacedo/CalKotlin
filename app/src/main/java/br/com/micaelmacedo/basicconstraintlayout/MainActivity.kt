@@ -397,9 +397,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun validateNumber(screenText:List<String>):Boolean{
-        return (screenText.isNotEmpty() && (screenText.last().matches("-?[\\d.]+(?:E-?\\d+)?".toRegex())
+        return (screenText.isNotEmpty() && (screenText.last().matches("-?[\\d]*\\.{0,1}[\\d]*(?:E-?\\d+)?".toRegex())
                 ||
-                screenText.last().matches("-?[\\d.]+(?:E-?\\d+)?".toRegex())))
+                screenText.last().matches("-?[\\d]*\\.{0,1}[\\d]*(?:E-?\\d+)?".toRegex())))
     }
 
     private fun showChar(v: TextView) {
@@ -485,12 +485,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun validateExpression(expression: List<String>): Float? {
         var result: Float? = null
-        if ((!expression.last().matches("-?[\\d.]+(?:E-?\\d+)?".toRegex()) || !expression.first()
-                .matches("-?[\\d.]+(?:E-?\\d+)?".toRegex()))
+        if ((!expression.last().matches("-?[\\d]*\\.{0,1}[\\d]*(?:E-?\\d+)?".toRegex()) || !expression.first()
+                .matches("-?[\\d]*\\.{0,1}[\\d]*(?:E-?\\d+)?".toRegex()))
         ) {
             return result
         }
-        if (expression.size == 1){result = expression.first().toFloat()}
         if (expression.size == 3) {
             if (expression[1] == "+") result = sum(expression)
             if (expression[1] == "-") result = subtr(expression)
